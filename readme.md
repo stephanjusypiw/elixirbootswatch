@@ -192,7 +192,7 @@ Note:  I am assuming that you have installed node, gulp and bower on your dev ma
 	@import "cerulean/variables";
 	```
 
-23. Finally, if you want the entire bootswatch themes then change your gulpfile.js 
+23. Finally, if you want the entire bootswatch themes then change your **gulpfile.js**
    as show shown below:
 
 
@@ -210,11 +210,11 @@ Note:  I am assuming that you have installed node, gulp and bower on your dev ma
         		'vendor/bower_components/bootswatch',
         		'resources/assets/less/bootswatch'
     ```
-     Then in your resources/assests/app.less file add the following if you
+     Then in your ***resources/assests/app.less*** file add the following if you
      want, say the cosmo theme.
      ```
      @import "bootstrap/bootstrap";
      @import "bootswatch/cosmo/variables";
      ```
-     NOTE:  DON'T FORGET TO RUN gulp AT THE COMMAND LINE AFTER YOU EDIT THE
-     resources/assests/app.less file!
+     **NOTE:  DON'T FORGET TO RUN gulp AT THE COMMAND LINE AFTER YOU EDIT THE
+     resources/assests/app.less file!***
