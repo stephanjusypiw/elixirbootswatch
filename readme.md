@@ -115,7 +115,7 @@ Note:  I am assuming that you have installed node, gulp and bower on your dev ma
     });
     ```
     
-15. Now delete the folder **resources/less/boostrap**(that comes with the default installation of Laravel 5)
+15. Now delete the folder **resources/less/boostrap** (that comes with the default installation of Laravel 5)
  	 We will not use this folder.
 
 16. Delete the contents of the file **resources/less/app.less**.  This file should now
@@ -129,7 +129,7 @@ Note:  I am assuming that you have installed node, gulp and bower on your dev ma
     } 
     ```
 
-18. In the public folder delete the folder **css** (this folder has a **app.css** file that you will
+18. In the **public** folder delete the folder **css** (this folder has a **app.css** file that you will
     also delete)
 
 
@@ -139,5 +139,82 @@ Note:  I am assuming that you have installed node, gulp and bower on your dev ma
  	gulp
     ```
     
-20.  Your public folder will now contain the complied **app.css** file inside
+20.  Your **public** folder should now contain the complied **app.css** file inside
      a folder called css.  Yippee....... this worked!
+
+21.  The next step is to expand the **gulpfile.js** to include Bootstrap, Bootswatch and
+     jQuery.  This is the new **gulpfile.js** file.
+     Note:  Many thanks to **raygun** from Laracasts who created the original **gulpfile.js** file.
+            I could not get the correct result WITHOUT raygun's **gulpfile.js** file.
+
+    ```
+    var elixir = require('laravel-elixir');
+    
+    elixir(function(mix){
+        // Copy the files that bower has fetched. Note that gulp tasks run
+        // asynchronously. 
+        mix.copy(
+            'vendor/bower_components/jquery/dist/jquery.js',
+            'resources/assets/js/jquery.js'
+            // I will use the cerulean bootswatch theme
+        ).copy(
+            'vendor/bower_components/bootswatch/cerulean',
+            'resources/assets/less/cerulean'
+        ).copy(
+            'vendor/bower_components/bootstrap/less',
+            'resources/assets/less/bootstrap'
+        ).copy(
+            'vendor/bower_components/bootstrap/dist/js/bootstrap.js',
+            'resources/assets/js/bootstrap.js'
+        ).copy(
+            'vendor/bower_components/bootstrap/dist/fonts',
+            'public/fonts'
+        );
+
+        // Combine scripts
+        mix.scripts([
+                'js/jquery.js',
+                'js/bootstrap.js'
+            ],
+            'public/js/admin.js',
+            'resources/assets'
+        );
+
+        // Compile Less into the public/css folder
+        mix.less('app.less', 'public/css');
+    });
+    
+	```
+
+22.  In the **resources/assests/app.less** file add the imports
+	```
+	@import "bootstrap/bootstrap";
+	@import "cerulean/variables";
+	```
+
+23. Finally, if you want the entire bootswatch themes then change your gulpfile.js 
+   as show shown below:
+
+
+   Old Code:
+   ```
+        // I will use the cerulean bootswatch theme
+		    ).copy(
+		        'vendor/bower_components/bootswatch/cerulean',
+		        'resources/assets/less/cerulean'
+   ```
+    New Code:
+    ```
+    	     // I will use the entire bootswatch library
+    		).copy(
+        		'vendor/bower_components/bootswatch',
+        		'resources/assets/less/bootswatch'
+    ```
+     Then in your resources/assests/app.less file add the following if you
+     want, say the cosmo theme.
+     ```
+     @import "bootstrap/bootstrap";
+     @import "bootswatch/cosmo/variables";
+     ```
+     NOTE:  DON'T FORGET TO RUN gulp AT THE COMMAND LINE AFTER YOU EDIT THE
+     resources/assests/app.less file!
