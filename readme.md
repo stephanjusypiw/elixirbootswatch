@@ -217,4 +217,4 @@ Note:  I am assuming that you have installed node, gulp and bower on your dev ma
      @import "bootswatch/cosmo/variables";
      ```
      **NOTE:  DON'T FORGET TO RUN gulp AT THE COMMAND LINE AFTER YOU EDIT THE
-     resources/assests/app.less file!***
+     resources/assests/app.less file!**
