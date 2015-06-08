@@ -63,7 +63,7 @@ Note:  I am assuming that you have installed node, gulp and bower on your dev ma
    bower init
    ```
    Answer the questions the best you can.  A new **bower.json** will be created in root folder
-   of your application.  You can edit the **bower.json*** file later if you wish.
+   of your application.  You can edit the **bower.json** file later if you wish.
 
 7. Create a **.bowerrc** at the root of your project and put the following code in the **.bowerc** file:
 	```
@@ -93,7 +93,7 @@ Note:  I am assuming that you have installed node, gulp and bower on your dev ma
     ```
 	bower search bootswatch
     ```
-	To see a list of bootswwtch options.
+	To see a list of bootswatch options.
 
 
 11. In the root of your application type the following at the command prompt:
@@ -114,22 +114,22 @@ Note:  I am assuming that you have installed node, gulp and bower on your dev ma
     	mix.less('app.less');
     });
     ```
-
- 15. Now delete the folder **resources/less/boostrap**(that comes with the default installation of Laravel 5)
+    
+15. Now delete the folder **resources/less/boostrap**(that comes with the default installation of Laravel 5)
  	 We will not use this folder.
 
- 16. Delete the contents of the file **resources/less/app.less**.  This file should now
+16. Delete the contents of the file **resources/less/app.less**.  This file should now
  	 be empty.
 
- 17. Add a simple CSS class to the file **resources/assets/less/app.less**. 
-     In this case a CSS class called **.flash**.  You can thank Jeffrey Way for this class.
-     ```
-	 .flash {
-	  background: #f66422;
-	 } 
-	 ```
+17. Add a simple CSS class to the file **resources/assets/less/app.less**. 
+    In this case a CSS class called **.flash**.  You can thank Jeffrey Way for this class.
+    ```
+    .flash {
+        background: #f66422;
+    } 
+    ```
 
- 18. In the public folder delete the folder **css** (this folder has a **app.css** file that you will
+18. In the public folder delete the folder **css** (this folder has a **app.css** file that you will
     also delete)
 
 
