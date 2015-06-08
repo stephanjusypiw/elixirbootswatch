@@ -1,5 +1,8 @@
 var elixir = require('laravel-elixir');
 
+// create variables for paths
+var bowerDirBootstrap = "vendor/bower_components/bootstrap/";
+var bowerDirBootswatch = "vendor/bower_components/bootswatch";
 
 elixir(function(mix){
     // Copy the files that bower has fetched. Note that gulp tasks run
@@ -12,16 +15,16 @@ elixir(function(mix){
 
         // I will use the entire bootswatch library
     ).copy(
-        'vendor/bower_components/bootswatch',
+         bowerDirBootswatch,
         'resources/assets/less/bootswatch'
     ).copy(
-        'vendor/bower_components/bootstrap/less',
+         bowerDirBootstrap + 'less',
         'resources/assets/less/bootstrap'
     ).copy(
-        'vendor/bower_components/bootstrap/dist/js/bootstrap.js',
+        bowerDirBootstrap + 'dist/js/bootstrap.js',
         'resources/assets/js/bootstrap.js'
     ).copy(
-        'vendor/bower_components/bootstrap/dist/fonts',
+        bowerDirBootstrap + 'dist/fonts',
         'public/fonts'
     );
 
