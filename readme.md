@@ -115,10 +115,10 @@ Note:  I am assuming that you have installed node, gulp and bower on your dev ma
     });
     ```
     
-15. Now delete the folder **resources/less/boostrap** (that comes with the default installation of Laravel 5)
+15. Now delete the folder **resources/assets/less/boostrap** (that comes with the default installation of Laravel 5)
  	 We will not use this folder.
 
-16. Delete the contents of the file **resources/less/app.less**.  This file should now
+16. Delete the contents of the file **resources/assets/less/app.less**.  This file should now
  	 be empty.
 
 17. Add a simple CSS class to the file **resources/assets/less/app.less**. 
