@@ -232,8 +232,8 @@ Note:   I am assuming that you have installed **node**, **gulp** and **bower** o
         		'vendor/bower_components/bootswatch',
         		'resources/assets/less/bootswatch'
     ```
-     Then in your ***resources/assests/app.less*** file add the following if you
-     want, say the cosmo theme.
+     Then in your **resources/assests/app.less** file add the following if you
+     want, say the Cosmo theme.
      
      ```
      @import "bootstrap/bootstrap";
