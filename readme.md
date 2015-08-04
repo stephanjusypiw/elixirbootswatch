@@ -91,9 +91,11 @@ Note:   I am assuming that you have installed **node**, **gulp** and **bower** o
 	You will see the list of bootstrap options.  There are HEAPS of bootstrap options.
 
 9.  In the root of your application type the following at the command prompt:
+
     ```
 	bower install bootstrap --save
     ```
+    
 	This will install bootstrap. There is no need to install JQuery because in this 
 	case it's a dependency of bootstrap.
 
@@ -101,13 +103,16 @@ Note:   I am assuming that you have installed **node**, **gulp** and **bower** o
 	2 new folders called **bootstrap** and **jquery**.
 
 10. In the root of your application type the following at the command prompt:
+
     ```
 	bower search bootswatch
     ```
+    
 	To see a list of bootswatch options.
 
 
 11. In the root of your application type the following at the command prompt:
+
 	```	
 	bower install bootswatch --save
     ```
@@ -118,8 +123,9 @@ Note:   I am assuming that you have installed **node**, **gulp** and **bower** o
 13. View the **bower.json** file to see the new dependencies that have been added.
 
 
-14. By default Laravel 5 uses less, so the file **gulpfile.js** should look like
+14. By default Laravel 5.0.16 uses less, so the file **gulpfile.js** should look like
     the code below:
+    
     ```
     elixir(function(mix) {
     	mix.less('app.less');
@@ -134,6 +140,7 @@ Note:   I am assuming that you have installed **node**, **gulp** and **bower** o
 
 17. Add a simple CSS class to the file **resources/assets/less/app.less**. 
     In this case a CSS class called **.flash**.  You can thank Jeffrey Way for this class.
+    
     ```
     .flash {
         background: #f66422;
@@ -146,18 +153,21 @@ Note:   I am assuming that you have installed **node**, **gulp** and **bower** o
 
 19. Now let's compile the new **app.less** file into a css file.  In the root directory of the Laravel 5
  	application type the following at the command prompt:
+ 	
     ```
  	gulp
     ```
     
 20.  Your **public** folder should now contain the complied **app.css** file inside
-     a folder called css.  Yippee....... this worked!
+     a folder called **css**.  Yippee....... this worked!
 
-21.  The next step is to expand the **gulpfile.js** to include Bootstrap, Bootswatch and
-     jQuery.  This is the new **gulpfile.js** file.
+21.  The next step is to expand the **gulpfile.js** to include **Bootstrap**, **Bootswatch** and
+     **jQuery**.  
+     This is the new **gulpfile.js** file.
+     
      Note:  Many thanks to **raygun** from Laracasts who created the original **gulpfile.js** file.
             I could not get the correct result WITHOUT raygun's **gulpfile.js** file.
-
+            
     ```
     var elixir = require('laravel-elixir');
     
@@ -198,6 +208,7 @@ Note:   I am assuming that you have installed **node**, **gulp** and **bower** o
 	```
 
 22.  In the **resources/assests/app.less** file add the imports
+
 	```
 	@import "bootstrap/bootstrap";
 	@import "cerulean/variables";
@@ -223,6 +234,7 @@ Note:   I am assuming that you have installed **node**, **gulp** and **bower** o
     ```
      Then in your ***resources/assests/app.less*** file add the following if you
      want, say the cosmo theme.
+     
      ```
      @import "bootstrap/bootstrap";
      @import "bootswatch/cosmo/variables";
