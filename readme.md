@@ -10,31 +10,33 @@
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
-### Tutorial on how to use Laravel 5 and Elixir with Bootswatch
+### Tutorial on how to use Laravel 5.0.16 and Elixir with Bootswatch (a Theme for Bootstrap)
 
-Note:  I am assuming that you have installed node, gulp and bower on your dev machine
+Note:   I am assuming that you have installed **node**, **gulp** and **bower** on your dev machine.
+        Here we go.....
 
 1. In the root directory of your Laravel 5 application type the following at the command prompt: 
 	```
 	npm install
     ```
 	Note : The command **npm install** 
-    is used in order to install gulp and laravel-elixir locally
+           is used in order to install **gulp** and **laravel-elixir** locally
 
 	If you get an error message in OSX try typing the following at the command prompt:
 	```
 	sudo npm install
     ```
-   (Note:  type **npm -v** to find the current version of current version of node)
+   (Note:  type **npm -v** to find the current version of **node**)
  
-2.  If you look at your Laravel 5 directory structure, you will now see a new folder under
+2.  If you look at your Laravel 5.0.16 directory structure, you will see a new folder under
  	the root folder called **node_modules**.
 
-3.  Check to see if gulp is installed by typing the following at the command prompt: 
+3.  Check to see if **gulp** is installed by typing the following in the root folder of your application:
+
     ```
 	gulp -v
 	```
-	in the root folder of your application
+	
 
     In my case the output is:
 	```
@@ -43,37 +45,46 @@ Note:  I am assuming that you have installed node, gulp and bower on your dev ma
 	[07:45:14] Local version 3.9.0
 	```
 	
-4.  If gulp is not installed type the following at the command prompt:
+4.  If **gulp** is not installed type the following at the command prompt:
 	```	
 	npm install --global gulp
 	```
 	
-5. Now there are a couple of ways to install Bootstrap. I’ve decided to use bower since it’s fairly easy.
-   To see if bower is installed type the following at the command prompt:
+5. Now there are a couple of ways to install **Bootstrap**. I’ve decided to use **bower** 
+   since it’s fairly easy.
+   
+   To see if **bower** is installed type the following at the command prompt:
    ```
    	bower -v
    ```
-   If bower is not installed on your system type the following at the command prompt:
+   If **bower** is not installed on your system type the following at the command prompt:
    ```
    npm install -g bower
    ```
    
-6. In the root folder of your application initialise bower with the following at the command prompt:
+6. In the root folder of your application initialise **bower** by typing 
+   the following at the command prompt:
+
    ```
    bower init
    ```
+   
    Answer the questions the best you can.  A new **bower.json** will be created in root folder
    of your application.  You can edit the **bower.json** file later if you wish.
 
-7. Create a **.bowerrc** at the root of your project and put the following code in the **.bowerc** file:
+7. Create a **.bowerrc** at the root of your project and put the following code 
+   in the **.bowerc** file:
+   
 	```
 	{
 		"directory": "vendor/bower_components"
 	}
 	```
+	
     With that code, we specify that all our libraries will be stored in **vendor/bower_components**.
 
-8.  In the root folder of your application type the following at the command prompt:
+8.  In the root folder of your application type the following at the command prompt to search for
+    **Bootstrap**.
     ```
 	bower search bootstrap
 	```
