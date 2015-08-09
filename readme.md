@@ -26,7 +26,7 @@ in the locations:
 Note:   I am assuming that you have installed **node**, **gulp** and **bower** on your dev machine.
         Here we go.....
 
-1. In the root directory of your Laravel 5 application type the following at the command prompt: 
+1. In the root directory of your Laravel 5.0.16 application type the following at the command prompt: 
 	```
 	npm install
     ```
