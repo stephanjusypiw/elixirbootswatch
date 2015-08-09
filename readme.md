@@ -12,7 +12,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ### Tutorial on how to use Laravel 5.0.16 and Elixir with Bootswatch (a Theme for Bootstrap)
 
-This tutorial was conducted on a Max OSX (10.10.4) machine.  **Node**, **gulp** and **bower** where installed
+This tutorial was conducted on a **Max OSX (10.10.4)** machine.  **Node**, **gulp** and **bower** where installed
 in the locations:
 
 ```
